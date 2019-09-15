@@ -1,0 +1,4 @@
+# ignore these
+*.csv
+*.cfg
+*.txt
