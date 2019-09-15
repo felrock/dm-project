@@ -6,18 +6,18 @@ from bs4 import BeautifulSoup
 import sys
 
 """
-    This script scrapes mashable.com atricles for the following,
-    author, timestamp of post, title and atricle content. The html
-    layout differs in some of the atricles so cleaning of the data
-    is needed. The cleaning consists of removed endlines, seperate
+    This script scrapes mashable.com articles for the following,
+    author, timestamp of post, title and article content. The html
+    layout differs in some of the articles so cleaning of the data
+    is needed. The cleaning consists of removing endlines, seperate
     date and name(from the author-info paragraph), and also removing
-    image script that occur sometimes in the atricle content.
-
+    image script that occur sometimes in the article content, also
+    the CES articles have a lot of unneccesary info in the content body.
 
 """
 
 def scrapeTitle(string):
-    #returns empty strings if not found
+    # returns empty strings if not found
 
     soup = BeautifulSoup(string, 'html.parser')
     title_ele = soup.find('h1', attrs={'class':'title'})
@@ -29,7 +29,7 @@ def scrapeTitle(string):
         return ''
 
 def scrapeAuthorDate(string):
-    #returns empty if nothing is found
+    # returns empty if nothing is found
 
     soup = BeautifulSoup(string, 'html.parser')
     author_info_ele = soup.find('div', attrs={'class':'article-info'})
@@ -57,7 +57,7 @@ def scrapeAuthorDate(string):
     return author, date
 
 def scrapeContent(string):
-    #returns empty if nothing is found
+    # returns empty if nothing is found
 
     # articles from CES shows redundant info, remove after 'More CES 2013 Coverage'
     # script lang needs to be removed
