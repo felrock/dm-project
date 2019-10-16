@@ -6,3 +6,5 @@ dataset
 .ipynb*
 *.cpp
 models
+*.model
+*.json
