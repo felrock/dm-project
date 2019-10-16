@@ -1,0 +1,48 @@
+{
+    "algorithm": {
+        "command": null,
+        "id": 0,
+        "name": "Gensim Continuous Skipgram",
+        "tool": "Gensim",
+        "url": "https://github.com/RaRe-Technologies/gensim",
+        "version": "3.1"
+    },
+    "contents": [
+        {
+            "filename": "model.txt",
+            "format": "text"
+        },
+        {
+            "filename": "meta.json",
+            "format": "json"
+        }
+    ],
+    "corpus": [
+        {
+            "NER": true,
+            "case preserved": true,
+            "description": "Gigaword 5th Edition",
+            "id": 5,
+            "language": "eng",
+            "lemmatized": true,
+            "public": false,
+            "stop words removal": "NLTK",
+            "tagger": "Stanford Core NLP v. 3.6.0",
+            "tagset": "UPoS",
+            "tokens": 4815382730,
+            "tool": null,
+            "url": "https://catalog.ldc.upenn.edu/LDC2011T07"
+        }
+    ],
+    "dimensions": 300,
+    "id": 4,
+    "iterations": 5,
+    "maintainers": [
+        {
+            "email": "andreku@ifi.uio.no",
+            "name": "Andrey Kutuzov"
+        }
+    ],
+    "vocabulary size": 314815,
+    "window": 2
+}
